@@ -54,6 +54,8 @@ main.hero {
   padding-top: 1.95rem;
 }
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 .aboutUsHeading {
   text-align: center;
   font-size: 2rem;
@@ -69,12 +71,26 @@ main.hero {
   text-align: center;
 }
 
-.boom {
-  color: #c38d9e;
-  font-weight: 900;
-  font-size: 1.2rem;
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+.search-container input {
+  width: 50%;
+  margin-right: 1rem;
+}
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
 }
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 .howItWorks {
   color: white;
   text-align: center;
@@ -104,6 +120,8 @@ main.hero {
   margin: 1.3rem;
 }
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 footer {
   text-align: center;
   color: rgb(91, 90, 90);
