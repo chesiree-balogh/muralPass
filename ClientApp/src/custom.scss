@@ -1,0 +1,130 @@
+/* Provide sufficient contrast against white background */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+:root {
+  font: 16px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+main.hero {
+  background-image: url(./images/hero.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding-bottom: 35rem;
+}
+
+.appHeading,
+.tagline {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  line-height: 2rem;
+}
+
+.appHeading {
+  margin-top: 3rem;
+  text-shadow: 2px 2px 2px rgb(67, 180, 208);
+  padding-top: 3rem;
+}
+
+.aboutUsHeading {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(91, 90, 90);
+  margin-top: 4rem;
+}
+
+.aboutUs p {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 4rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+
+.boom {
+  color: #c38d9e;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.howItWorks {
+  color: white;
+  text-align: center;
+  background-color: #e3764a;
+  padding-bottom: 3rem;
+}
+
+.howItWorks h3 {
+  padding-top: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+/*  */
+
+.list h4 {
+  font-size: 1.2rem;
+}
+
+.list {
+  border: 0.1rem solid white;
+  border-radius: 5rem;
+  box-shadow: inset 2px 2px 8px 2px rgba(161, 160, 160, 0.4);
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.list p {
+  margin: 1.3rem;
+}
+
+footer {
+  text-align: center;
+  color: rgb(91, 90, 90);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Sign In Page */
+
+.signIn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.signInHeader {
+  text-align: center;
+  color: #c38d9e;
+  margin-top: 3rem;
+}
+
+input {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* 
+color schemes
+dark blue: #264166 or rgb(38, 65, 102)
+light blue: #377994 or 	rgb(55, 121, 148)
+teal: #42929e or rgb(66, 146, 158)
+tan blue: #8cada6 or rgb(140, 173, 166)
+tan: #eed6b2 or rgb(238, 214, 178)
+yellow: #eaaa76 or rgb(234, 170, 118)
+orange: #e3764a or rgb(227, 118, 74)
+red: #d24d38 or rgb(210, 77, 56)
+*/
