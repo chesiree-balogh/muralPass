@@ -26,19 +26,32 @@ main.hero {
   width: 100%;
   height: auto;
   padding-bottom: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .appHeading,
-.tagline {
+.tagline,
+.callToAction {
   text-align: center;
   color: rgb(0, 0, 0);
   line-height: 2rem;
 }
 
+.callToAction {
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  border: black dotted 0.2rem;
+  background-color: whitesmoke;
+}
+
 .appHeading {
-  margin-top: 3rem;
+  margin-top: 0.2rem;
   text-shadow: 2px 2px 2px rgb(67, 180, 208);
-  padding-top: 3rem;
+  padding-top: 1.95rem;
 }
 
 .aboutUsHeading {
@@ -74,7 +87,6 @@ main.hero {
   font-size: 2rem;
   color: white;
 }
-/*  */
 
 .list h4 {
   font-size: 1.2rem;

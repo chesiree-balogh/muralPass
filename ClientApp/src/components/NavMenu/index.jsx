@@ -38,7 +38,7 @@ export class NavMenu extends Component {
         >
           <Container>
             <NavbarBrand tag={Link} to="/">
-              muralPass
+              Mural Pass
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse

@@ -1,12 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function Home() {
   return (
     <>
-      {' '}
       <main className="hero">
         <h1 class="appHeading">Mural Pass</h1>
         <h2 class="tagline">Discover the cities best murals!</h2>
+        {/* add a call to action link/button to map */}
+        <Link to="/map" class="callToAction">
+          Discover Murals
+        </Link>
       </main>
       <section class="aboutUs">
         <h3 class="aboutUsHeading">About Mural Pass</h3>
@@ -21,6 +25,7 @@ export function Home() {
         </p>
         {/* add a carousel of mural images... about 2/3 the width of the how it works bubbles */}
       </section>
+      {/* have an image of the map that when you click it it take you to the interactive map page */}
       {/* maybe somehow turn these three things into a carousel? to shorten page */}
       <section class="howItWorks">
         <h3>How it Works</h3>
