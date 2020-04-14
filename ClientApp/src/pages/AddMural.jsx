@@ -4,24 +4,20 @@ const AddMural = () => {
   return (
     <>
       <main>
-        <section>
+        <section className="addContainer">
           <label htmlFor="">Mural Description</label>
           <input type="text" />
         </section>
-        <section>
+        <section className="addContainer">
           <label htmlFor="">Artist Name</label>
           <input type="text" />
         </section>
-        <section>
-          <label htmlFor="">Address</label>
+        <section className="addContainer">
+          <label htmlFor="">Longitude</label>
           <input type="text" />
         </section>
-        <section>
-          <label htmlFor="">City</label>
-          <input type="text" />
-        </section>
-        <section>
-          <label htmlFor="">State</label>
+        <section className="addContainer">
+          <label htmlFor="">Latitude</label>
           <input type="text" />
         </section>
         <button>Report a new mural</button>

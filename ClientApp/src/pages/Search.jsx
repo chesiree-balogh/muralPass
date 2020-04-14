@@ -11,7 +11,10 @@ const Search = () => {
       <main>
         <ul></ul>
         <section className="no-results">
-          No murals?<Link to="/add">Report a mural.</Link>
+          No murals?
+          <Link to="/add" className="reportAMural">
+            Report a mural.
+          </Link>
         </section>
       </main>
     </main>
