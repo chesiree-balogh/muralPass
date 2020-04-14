@@ -8,7 +8,7 @@ namespace muralPass.Models
   public partial class DatabaseContext : DbContext
   {
 
-
+    public DbSet<Mural> Murals { get; set; }
 
 
     private string ConvertPostConnectionToConnectionString(string connection)

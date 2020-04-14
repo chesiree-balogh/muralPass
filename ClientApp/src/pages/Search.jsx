@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Search = () => {
   return (
-    <>
+    <main className="searchPage">
       <section className="search-container">
         <input type="search" />
         <button>Search</button>
@@ -11,10 +11,10 @@ const Search = () => {
       <main>
         <ul></ul>
         <section className="no-results">
-          No murals? <Link to="/add"> Report a mural.</Link>
+          No murals?<Link to="/add">Report a mural.</Link>
         </section>
       </main>
-    </>
+    </main>
   )
 }
 

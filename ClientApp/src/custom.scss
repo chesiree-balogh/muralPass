@@ -55,6 +55,7 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
+// ABOUT US SECTION //
 ////////////////////////////////////////////////////////
 .aboutUsHeading {
   text-align: center;
@@ -72,15 +73,19 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
+// SEARCH PAGE //
 ////////////////////////////////////////////////////////
 .search-container {
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
 }
+
 .search-container input {
   width: 50%;
   margin-right: 1rem;
 }
+
 .no-results {
   display: flex;
   justify-content: center;
@@ -90,6 +95,7 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
+// HOW IT WORKS SECTION //
 ////////////////////////////////////////////////////////
 .howItWorks {
   color: white;
@@ -121,6 +127,7 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
+// FOOTER //
 ////////////////////////////////////////////////////////
 footer {
   text-align: center;
@@ -149,8 +156,8 @@ input {
 
 /* 
 color schemes
-dark blue: #264166 or rgb(38, 65, 102)
-light blue: #377994 or 	rgb(55, 121, 148)
+dark blue: #264166 or rgb(38, 65, 102)**
+light blue: #377994 or 	rgb(55, 121, 148)**
 teal: #42929e or rgb(66, 146, 158)
 tan blue: #8cada6 or rgb(140, 173, 166)
 tan: #eed6b2 or rgb(238, 214, 178)
