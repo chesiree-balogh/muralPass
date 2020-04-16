@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('')
+  const [results, setResults] = useState([])
 
   // its a get cuz we want to get data/info
   const searchForMurals = async () => {
     const resp = await axios.get(`/api/search/murals?searchTerm=${searchTerm}`)
     console.log(resp.data)
+    setResults(resp.data)
   }
   // maybe change this to search by city? instead of artist...
   return (
@@ -19,10 +21,14 @@ const Search = () => {
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
-        <button onClick={searchForMurals}>Search Artist Names</button>
+        <button onClick={searchForMurals}>Search By Artist Names</button>
       </section>
       <main>
-        <ul></ul>
+        <ul>
+          {results.map(mural => {
+            return <li>{mural.artistName}</li>
+          })}
+        </ul>
         <section className="no-results">
           No murals?
           <Link to="/add" className="reportAMural">
