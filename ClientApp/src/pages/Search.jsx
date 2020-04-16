@@ -13,7 +13,7 @@ const Search = () => {
         <section className="no-results">
           No murals?
           <Link to="/add" className="reportAMural">
-            Report a mural.
+            Log a new mural
           </Link>
         </section>
       </main>

@@ -27,7 +27,7 @@ export function Home() {
       </section>
       <section>
         <Link to="/search" class="searchButton">
-          Search
+          Search Currently Logged Murals
         </Link>
       </section>
       {/* have an image of the map that when you click it it take you to the interactive map page */}

@@ -47,7 +47,11 @@ const AddMural = () => {
         <main>
           <section className="addContainer">
             <label htmlFor="">Mural Description</label>
-            <input type="text" name="description" onChange={updateMuralData} />
+            <input
+              type="text"
+              name="muralDescription"
+              onChange={updateMuralData}
+            />
           </section>
           <section className="addContainer">
             <label htmlFor="">Artist Name</label>
@@ -61,7 +65,7 @@ const AddMural = () => {
             <label htmlFor="">Latitude</label>
             <input type="text" name="latitude" onChange={updateMuralData} />
           </section>
-          <button onClick={addMuralToApi}>Report a new mural</button>
+          <button onClick={addMuralToApi}>Log a new mural</button>
         </main>
       </>
     )

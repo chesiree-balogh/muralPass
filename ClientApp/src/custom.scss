@@ -19,6 +19,18 @@ code {
   border-color: #1861ac;
 }
 
+////////////////////////////////////////////////////////
+// NAV BAR //
+////////////////////////////////////////////////////////
+
+// remove padding under nav bar
+nav.navbar {
+  margin-bottom: 0 !important;
+}
+
+////////////////////////////////////////////////////////
+// HERO SECTION //
+////////////////////////////////////////////////////////
 main.hero {
   background-image: url(./images/hero.jpeg);
   background-size: cover;
@@ -152,6 +164,49 @@ footer {
 input {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+////////////////////////////////////////////////////////
+// PAGELOADER //
+////////////////////////////////////////////////////////
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+////////////////////////////////////////////////////////
+// SINGLE MURAL DISPLAY PAGE //
+////////////////////////////////////////////////////////
+.mural-details img {
+  width: 100%;
+  height: 33vh;
+}
+
+.mural-details > section {
+  display: grid;
+  grid-template-rows: 5rem 3rem 2rem 10rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 1rem;
+}
+
+.mural-details h1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.mural-details .muralDescription {
+  grid-row-start: 4;
+}
+
+.directions-link {
+  border-radius: 10rem;
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+  color: rgb(234, 170, 118);
 }
 
 /* 
