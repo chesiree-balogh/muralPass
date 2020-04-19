@@ -1,8 +1,8 @@
-docker build -t muralPass-image .
+docker build -t muralpass-image .
 
-docker tag muralPass-image registry.heroku.com/muralPass/web
+docker tag muralpass-image registry.heroku.com/muralpass/web
 
 
-docker push registry.heroku.com/muralPass/web
+docker push registry.heroku.com/muralpass/web
 
-heroku container:release web -a muralPass
+heroku container:release web -a muralpass

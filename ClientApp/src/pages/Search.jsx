@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import EmptyMuralList from '../components/EmptyMuralList'
+import MuralList from '../components/MuralList'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -24,17 +26,11 @@ const Search = () => {
         <button onClick={searchForMurals}>Search By Artist Names</button>
       </section>
       <main>
-        <ul>
-          {results.map(mural => {
-            return <li>{mural.artistName}</li>
-          })}
-        </ul>
-        <section className="no-results">
-          No murals?
-          <Link to="/add" className="reportAMural">
-            Log a new mural
-          </Link>
-        </section>
+        {results.length > 0 ? (
+          <MuralList results={results} />
+        ) : (
+          <EmptyMuralList />
+        )}
       </main>
     </>
   )

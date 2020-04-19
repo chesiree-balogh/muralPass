@@ -25,10 +25,8 @@ export function Home() {
         </p>
         {/* add a carousel of mural images... about 2/3 the width of the how it works bubbles */}
       </section>
-      <section>
-        <Link to="/search" class="searchButton">
-          Search Currently Logged Murals
-        </Link>
+      <section className="searchButton">
+        <Link to="/search">Search Currently Logged Murals</Link>
       </section>
       {/* have an image of the map that when you click it it take you to the interactive map page */}
       {/* maybe somehow turn these three things into a carousel? to shorten page */}
