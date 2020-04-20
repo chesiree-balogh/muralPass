@@ -22,7 +22,7 @@ const Map = () => {
     height: 800,
     latitude: latitude,
     longitude: longitude,
-    zoom: 8,
+    zoom: 12,
   })
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Map = () => {
       description: 'from UI',
       fullAddress: locationAddress,
     })
-    if (resp.status === 200) {
+    if (resp.status === 201) {
       setMarkers(prevMarkers => {
         return [resp.data, ...prevMarkers]
       })
