@@ -18,8 +18,8 @@ const Map = () => {
   // console.log(latitude, longitude, timestamp, accuracy, error)
 
   const [viewport, setViewport] = useState({
-    width: 800,
-    height: 800,
+    width: 415,
+    height: 625,
     latitude: latitude,
     longitude: longitude,
     zoom: 12,
@@ -40,7 +40,7 @@ const Map = () => {
   const [markers, setMarkers] = useState([])
   const [locationAddress, setLocationAddress] = useState('')
   const loadAllLocations = async () => {
-    const resp = await axios.get('/api/location')
+    const resp = await axios.get('/api/murals')
     setMarkers(resp.data)
   }
 
@@ -70,7 +70,7 @@ const Map = () => {
       <section>
         <input
           type="text"
-          placeholder="Full address..."
+          placeholder="address, city, state, zip"
           value={locationAddress}
           onChange={e => setLocationAddress(e.target.value)}
         />

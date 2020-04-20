@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using muralPass.Models;
 
 namespace muralPass.Controllers
@@ -15,9 +18,12 @@ namespace muralPass.Controllers
     {
         private readonly DatabaseContext _context;
 
-        public MuralsController(DatabaseContext context)
+        private readonly string _MAPBOX_TOKEN;
+
+        public MuralsController(DatabaseContext context, IConfiguration config)
         {
             _context = context;
+            this._MAPBOX_TOKEN = config["MAPBOX_TOKEN"];
         }
 
         // GET: api/Murals
@@ -79,6 +85,19 @@ namespace muralPass.Controllers
         [HttpPost]
         public async Task<ActionResult<Mural>> PostMural(Mural mural)
         {
+            var client = new HttpClient();
+            var resp = await client.GetAsync($"https://api.mapbox.com/geocoding/v5/mapbox.places/{mural.FullAddress}.json?access_token={this._MAPBOX_TOKEN}");
+
+            var json = await JsonDocument.ParseAsync(await resp.Content.ReadAsStreamAsync());
+            var root = json.RootElement;
+            var feature = root.GetProperty("features").EnumerateArray().First();
+            var center = feature.GetProperty("center").EnumerateArray();
+            var lng = center.First();
+            var lat = center.Skip(1).First();
+
+            Console.WriteLine($"{lat},{lng}");
+            mural.Latitude = lat.GetDouble();
+            mural.Longitude = lng.GetDouble();
             _context.Murals.Add(mural);
             await _context.SaveChangesAsync();
 

@@ -28,11 +28,14 @@ namespace muralPass.Migrations
                     b.Property<string>("ArtistName")
                         .HasColumnType("text");
 
-                    b.Property<string>("Latitude")
+                    b.Property<string>("FullAddress")
                         .HasColumnType("text");
 
-                    b.Property<string>("Longitude")
-                        .HasColumnType("text");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
 
                     b.Property<string>("MuralDescription")
                         .HasColumnType("text");

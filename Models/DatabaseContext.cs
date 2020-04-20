@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using mapTest.Models;
+// using mapTest.Models;
 
 namespace muralPass.Models
 {
@@ -33,8 +33,6 @@ namespace muralPass.Models
                 optionsBuilder.UseNpgsql(conn);
             }
         }
-
-        public DbSet<mapTest.Models.PointOfInterest> PointOfInterest { get; set; }
 
     }
 }

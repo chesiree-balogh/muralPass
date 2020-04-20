@@ -26,6 +26,7 @@ code {
 // remove padding under nav bar
 nav.navbar {
   margin-bottom: 0 !important;
+  background-color: rgb(74, 137, 162);
 }
 
 ////////////////////////////////////////////////////////
@@ -62,7 +63,7 @@ main.hero {
 
 .appHeading {
   margin-top: 0.2rem;
-  text-shadow: 2px 2px 2px rgb(67, 180, 208);
+  text-shadow: 2px 2px 2px rgb(76, 171, 208);
   padding-top: 1.95rem;
 }
 
@@ -95,6 +96,7 @@ main.hero {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
+  background-color: rgb(238, 214, 178);
 }
 
 .search-container input {
@@ -108,6 +110,7 @@ main.hero {
   align-items: center;
   height: 70vh;
   width: 100%;
+  background-color: rgb(238, 214, 178);
 }
 
 ////////////////////////////////////////////////////////

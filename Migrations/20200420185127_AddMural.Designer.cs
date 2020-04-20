@@ -9,8 +9,8 @@ using muralPass.Models;
 namespace muralPass.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20200414232156_LongAndLat")]
-    partial class LongAndLat
+    [Migration("20200420185127_AddMural")]
+    partial class AddMural
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,11 +30,14 @@ namespace muralPass.Migrations
                     b.Property<string>("ArtistName")
                         .HasColumnType("text");
 
-                    b.Property<string>("Latitude")
+                    b.Property<string>("FullAddress")
                         .HasColumnType("text");
 
-                    b.Property<string>("Longitude")
-                        .HasColumnType("text");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
 
                     b.Property<string>("MuralDescription")
                         .HasColumnType("text");
