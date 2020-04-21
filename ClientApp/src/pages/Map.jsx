@@ -36,12 +36,12 @@ const Map = () => {
   }, [latitude, longitude])
 
   const [showPopup, setShowPopup] = useState(false)
-  const [selectedPlace, setSelectedPlace] = useState({})
-  const [markers, setMarkers] = useState([])
+  const [selectedMural, setSelectedMural] = useState({})
+  const [murals, setMurals] = useState([])
   const [locationAddress, setLocationAddress] = useState('')
   const loadAllLocations = async () => {
     const resp = await axios.get('/api/murals')
-    setMarkers(resp.data)
+    setMurals(resp.data)
   }
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Map = () => {
 
   const markerClicked = place => {
     console.log('marker clicked', place)
-    setSelectedPlace(place)
+    setSelectedMural(place)
     setShowPopup(true)
   }
 
@@ -60,7 +60,7 @@ const Map = () => {
       fullAddress: locationAddress,
     })
     if (resp.status === 201) {
-      setMarkers(prevMarkers => {
+      setMurals(prevMarkers => {
         return [resp.data, ...prevMarkers]
       })
     }
@@ -87,18 +87,18 @@ const Map = () => {
         >
           {showPopup && (
             <Popup
-              latitude={selectedPlace.latitude}
-              longitude={selectedPlace.longitude}
+              latitude={selectedMural.latitude}
+              longitude={selectedMural.longitude}
               closeButton={true}
               closeOnClick={false}
               onClose={() => setShowPopup(false)}
               anchor="top"
               offsetTop={15}
             >
-              <div className="popup-window">😊{selectedPlace.description}</div>
+              <div className="popup-window">😊{selectedMural.description}</div>
             </Popup>
           )}
-          {markers.map(place => {
+          {murals.map(place => {
             return (
               <Marker
                 latitude={place.latitude}
