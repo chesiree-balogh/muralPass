@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 // this pages job is to displaying the mural information
 
@@ -11,9 +12,9 @@ const MuralDetails = props => {
       <img src="http://placekitten.com/600/400" alt={mural.artistName} />
       <section>
         <h1>{mural.artistName}</h1>
-        <button className="directions-link">
+        <Link to="/map" className="directions-link">
           <FontAwesomeIcon icon={faMapMarkedAlt} />
-        </button>
+        </Link>
         <p className="longitudeSection">longitude:</p>
         <p className="longitudeNumbers">{mural.longitude}</p>
 
