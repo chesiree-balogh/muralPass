@@ -31,5 +31,4 @@ const MuralDetails = props => {
     return <PageLoader />
   }
 }
-
 export default MuralDetails

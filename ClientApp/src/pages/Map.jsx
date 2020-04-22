@@ -68,13 +68,15 @@ const Map = () => {
   return (
     <div>
       <section>
-        <input
+        {/* add a mural input box at top of map */}
+        {/* maybe add a Link to add a mural page? */}
+        {/* <input
           type="text"
           placeholder="address, city, state, zip"
           value={locationAddress}
           onChange={e => setLocationAddress(e.target.value)}
         />
-        <button onClick={addNewLocation}>Add New Location</button>
+        <button onClick={addNewLocation}>Add New Location</button> */}
       </section>
 
       <section className="map-container">
@@ -95,7 +97,8 @@ const Map = () => {
               anchor="top"
               offsetTop={15}
             >
-              <div className="popup-window">😊{selectedMural.description}</div>
+              <div className="popup-window">😊</div>
+              {/* <div className="popup-window">😊{selectedMural.description}</div> */}
             </Popup>
           )}
           {murals.map(place => {

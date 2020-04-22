@@ -14,8 +14,16 @@ const MuralDetails = props => {
         <button className="directions-link">
           <FontAwesomeIcon icon={faMapMarkedAlt} />
         </button>
-        <p>{mural.longitude}</p>
-        <p>{mural.latitude}</p>
+        <p className="longitudeSection">longitude:</p>
+        <p className="longitudeNumbers">{mural.longitude}</p>
+
+        <p className="latitudeSection">latitude</p>
+        <p className="latitudeNumbers">{mural.latitude}</p>
+
+        <p className="fullAddressDis">Full address:</p>
+        <p className="fullAddress">{mural.fullAddress}</p>
+
+        <p className="muralDescriptionSection">Mural Description:</p>
         <p className="muralDescription">{mural.muralDescription}</p>
       </section>
     </main>

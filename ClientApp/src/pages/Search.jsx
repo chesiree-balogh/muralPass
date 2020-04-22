@@ -23,7 +23,7 @@ const Search = () => {
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
-        <button onClick={searchForMurals}>Search By Artist Names</button>
+        <button onClick={searchForMurals}>Search By Artist, City or ZIP</button>
       </section>
       <main>
         {results.length > 0 ? (

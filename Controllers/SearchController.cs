@@ -29,11 +29,11 @@ namespace muralPass.Controllers
             //  find murals where search words match
 
             var results = _context.Murals.Where(w => w.ArtistName.ToLower().Contains(searchTerm.ToLower()));
-            // if you want it to search multiple points of info like artist name, city, latitude etc:
-            // var results = _context.Murals.Where(w => 
+            // // if you want it to search multiple points of info like artist name, city, latitude etc:
+            // var results = _context.Murals.Where(w =>
             // w.ArtistName.ToLower().Contains(searchTerm.ToLower())) ||
-            // w.MuralDescription.ToLower().COntails(searchTerm.ToLower())
-            // maybe do ArtistName and add City?
+            // w.FullAddress.ToLower().COntails(searchTerm.ToLower());
+            // // maybe do ArtistName and add City?
 
 
             return Ok(await results.ToListAsync());
