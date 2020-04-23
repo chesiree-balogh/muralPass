@@ -3,6 +3,7 @@
 :root {
   font: 16px;
   font-family: 'Quicksand', sans-serif;
+  background-color: rgb(238, 214, 178);
 }
 
 a {
@@ -203,7 +204,7 @@ input {
 
 .mural-details > section {
   display: grid;
-  grid-template-rows: 5rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 10rem;
+  grid-template-rows: 5rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 10rem;
   grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
   padding: 1rem;
 }
@@ -259,15 +260,15 @@ input {
   grid-column-end: 8;
 }
 
-.mural-details .fullAddressDis {
+.muralIdNumberDis {
   text-align: center;
 
   grid-row: 6;
-  grid-column-start: 1;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
-.mural-details .fullAddress {
+.mural-details .fullAddressDis {
   text-align: center;
 
   grid-row: 7;
@@ -275,10 +276,18 @@ input {
   grid-column-end: 8;
 }
 
+.mural-details .fullAddress {
+  text-align: center;
+
+  grid-row: 8;
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
 .mural-details .muralDescriptionSection {
   text-align: center;
 
-  grid-row: 9;
+  grid-row: 10;
   grid-column-start: 1;
   grid-column-end: 8;
 }
@@ -286,7 +295,7 @@ input {
 .mural-details .muralDescription {
   text-align: center;
 
-  grid-row-start: 10;
+  grid-row-start: 11;
   grid-column-start: 1;
   grid-column-end: 8;
 }

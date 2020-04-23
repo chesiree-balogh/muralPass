@@ -9,16 +9,16 @@ const MuralDetails = props => {
   const { mural } = props
   return (
     <main className="mural-details">
-      <img src="http://placekitten.com/600/400" alt={mural.artistName} />
+      <img src={mural.imageURL} alt={mural.artistName} />
       <section>
         <h1>{mural.artistName}</h1>
         <Link to="/map" className="directions-link">
           <FontAwesomeIcon icon={faMapMarkedAlt} />
         </Link>
-        <p className="longitudeSection">longitude:</p>
+        <p className="longitudeSection">Longitude:</p>
         <p className="longitudeNumbers">{mural.longitude}</p>
 
-        <p className="latitudeSection">latitude</p>
+        <p className="latitudeSection">Latitude</p>
         <p className="latitudeNumbers">{mural.latitude}</p>
 
         <p className="fullAddressDis">Full address:</p>
@@ -26,6 +26,8 @@ const MuralDetails = props => {
 
         <p className="muralDescriptionSection">Mural Description:</p>
         <p className="muralDescription">{mural.muralDescription}</p>
+
+        <p className="muralIdNumberDis">Mural ID number: {mural.id}</p>
       </section>
     </main>
   )

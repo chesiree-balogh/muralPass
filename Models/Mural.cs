@@ -13,5 +13,7 @@ namespace muralPass.Models
 
         public string FullAddress { get; set; }
 
+        public string ImageURL { get; set; }
+
     }
 }

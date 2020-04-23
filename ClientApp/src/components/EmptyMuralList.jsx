@@ -7,7 +7,7 @@ const EmptyMuralList = () => {
       <section className="no-results">
         No murals?
         <Link to="/add" className="reportAMural">
-          Log a new mural
+          Add Murals
         </Link>
       </section>
     </div>

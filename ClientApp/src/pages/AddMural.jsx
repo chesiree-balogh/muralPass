@@ -61,6 +61,10 @@ const AddMural = () => {
             <label htmlFor="">Full Address</label>
             <input type="text" name="fullAddress" onChange={updateMuralData} />
           </section>
+          <section className="addContainer">
+            <label htmlFor="">Img URL</label>
+            <input type="text" name="imageURL" onChange={updateMuralData} />
+          </section>
           {/* <section className="addContainer">
             <label htmlFor="">Longitude</label>
             <input type="text" name="longitude" onChange={updateMuralData} />

@@ -17,7 +17,7 @@ export default class App extends Component {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/counter" component={HelloWorld} />
+          {/* <Route exact path="/counter" component={HelloWorld} /> */}
           <Route exact path="/search" component={Search} />
           <Route exact path="/map" component={Map} />
           <Route exact path="/add" component={AddMural} />
