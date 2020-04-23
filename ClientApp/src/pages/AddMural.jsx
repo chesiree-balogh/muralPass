@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const AddMural = () => {
   const [mural, setMural] = useState({})
@@ -75,6 +76,17 @@ const AddMural = () => {
           </section> */}
           <button onClick={addMuralToApi}>Log a new mural</button>
         </main>
+
+        <section>
+          <p>Want to discover currently logged murals?</p>
+          <Link to="/search" className="searchMurals">
+            Search view
+          </Link>
+          <p> </p>
+          <Link to="/map" className="mapOfMurals">
+            Map view
+          </Link>
+        </section>
       </>
     )
   }

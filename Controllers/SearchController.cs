@@ -26,14 +26,16 @@ namespace muralPass.Controllers
         [HttpGet("murals")]
         public async Task<ActionResult> SeachMurals(string searchTerm)
         {
-            //  find murals where search words match
+            //  find murals where search words match artist name
+            // var results = _context.Murals.Where(w => w.ArtistName.ToLower().Contains(searchTerm.ToLower()));
 
-            var results = _context.Murals.Where(w => w.ArtistName.ToLower().Contains(searchTerm.ToLower()));
-            // // if you want it to search multiple points of info like artist name, city, latitude etc:
-            // var results = _context.Murals.Where(w =>
-            // w.ArtistName.ToLower().Contains(searchTerm.ToLower())) ||
-            // w.FullAddress.ToLower().COntails(searchTerm.ToLower());
+
             // // maybe do ArtistName and add City?
+            // // if you want it to search multiple points of info like artist name, city, zip:
+            var results = _context.Murals.Where(w =>
+            w.ArtistName.ToLower().Contains(searchTerm.ToLower()) ||
+            w.FullAddress.ToLower().Contains(searchTerm.ToLower())
+            );
 
 
             return Ok(await results.ToListAsync());
