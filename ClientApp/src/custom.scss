@@ -84,9 +84,17 @@ main.hero {
 // labtop view
 @media (min-width: 1000px) {
   main.hero {
+    background-image: url(./images/hero1.jpg);
     width: 100%;
-    height: 22rem;
+    height: 42rem;
     padding-bottom: 0;
+  }
+
+  .appHeading,
+  .tagline {
+    text-align: center;
+    color: whitesmoke;
+    line-height: 2rem;
   }
 
   .appHeading {
@@ -405,11 +413,23 @@ footer {
 ////////////////////////////////////////////////////////
 // ADD A MURAL PAGE //
 ////////////////////////////////////////////////////////
+.addMuralPage {
+  background-image: url(./images/holdingmap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100rem;
+  padding-bottom: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .addMuralPage > div {
   display: grid;
-  grid-template-rows: 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 5rem;
+  grid-template-rows: 5rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .addMuralPage .whatIsMuralDescription {
@@ -422,7 +442,7 @@ footer {
 }
 
 .addMuralPage .whatIsMuralDescriptionInput {
-  text-align: center;
+  text-align: left;
 
   grid-row: 1;
   grid-column-start: 3;
@@ -432,6 +452,7 @@ footer {
 .addMuralPage .whatIsArtistName {
   text-align: right;
   padding-right: 2rem;
+  margin-top: 1rem;
 
   grid-row: 2;
   grid-column-start: 1;
@@ -439,7 +460,8 @@ footer {
 }
 
 .addMuralPage .whatIsArtistNameInput {
-  text-align: center;
+  text-align: left;
+  margin-top: 1rem;
 
   grid-row: 2;
   grid-column-start: 3;
@@ -449,6 +471,7 @@ footer {
 .addMuralPage .whatIsFullAddress {
   text-align: right;
   padding-right: 2rem;
+  margin-top: 1rem;
 
   grid-row: 3;
   grid-column-start: 1;
@@ -456,7 +479,8 @@ footer {
 }
 
 .addMuralPage .whatIsFullAddressInput {
-  text-align: center;
+  text-align: left;
+  margin-top: 1rem;
 
   grid-row: 3;
   grid-column-start: 3;
@@ -466,6 +490,7 @@ footer {
 .addMuralPage .whatIsImgURL {
   text-align: right;
   padding-right: 2rem;
+  margin-top: 1rem;
 
   grid-row: 4;
   grid-column-start: 1;
@@ -473,7 +498,8 @@ footer {
 }
 
 .addMuralPage .whatIsImgURLInput {
-  text-align: center;
+  text-align: left;
+  margin-top: 1rem;
 
   grid-row: 4;
   grid-column-start: 3;
@@ -488,10 +514,14 @@ footer {
   grid-column-end: 4;
 }
 
+.logMuralButton h4 {
+  padding-top: 0.5rem;
+}
+
 .discoverCurrent {
   text-align: center;
 
-  grid-row: 8;
+  grid-row: 10;
   grid-column-start: 1;
   grid-column-end: 5;
 }
@@ -499,17 +529,65 @@ footer {
 .searchMurals {
   text-align: center;
 
-  grid-row: 9;
+  grid-row: 11;
   grid-column-start: 1;
   grid-column-end: 3;
+  color: black;
+  padding-top: 1rem;
+  border-radius: 10rem;
+  border: black solid 0.2rem;
+  background-color: whitesmoke;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .mapOfMurals {
   text-align: center;
 
-  grid-row: 9;
+  grid-row: 11;
   grid-column-start: 3;
   grid-column-end: 5;
+  color: black;
+  padding-top: 1rem;
+  border-radius: 10rem;
+  border: black solid 0.2rem;
+  background-color: whitesmoke;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+// tablet view
+@media (min-width: 700px) {
+  .addMuralPage .whatIsMuralDescriptionInput,
+  .addMuralPage .whatIsArtistNameInput,
+  .addMuralPage .whatIsFullAddressInput,
+  .addMuralPage .whatIsImgURLInput {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .searchMurals {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .mapOfMurals {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+// labtop view
+@media (min-width: 1000px) {
+  .searchMurals {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+
+  .mapOfMurals {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
 }
 
 ////////////////////////////////////////////////////////

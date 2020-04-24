@@ -2,27 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-
-// import Mural from '/..components/Mural'
-// import React, { useState, useEffect } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 
 // // this pages job is to displaying the mural information
 
-// const [mural, setMural] = useState()
-
-// const deleteMuralData = async () => {
-//   const resp = await axios.delete('/api/murals/' + { mural })
-//   console.log(resp.data)
-//   setMural(resp.data)
-// }
-// useEffect(() => {
-//   // make api call on page load
-//   deleteMuralData()
-// }, [])
-
 const MuralDetails = props => {
   const { mural } = props
+  const deleteMuralData = async () => {
+    const resp = await axios.delete('/api/murals/' + mural.id)
+    console.log(resp.data)
+  }
+
+  const updateMuralData = async () => {
+    const resp = await axios.put('/api/murals/' + mural.id)
+    console.log(resp.data)
+  }
+
   return (
     <main className="mural-details">
       <img src={mural.imageURL} alt={mural.artistName} />
@@ -46,9 +41,15 @@ const MuralDetails = props => {
         <p className="muralIdNumberDis">Mural ID number: {mural.id}</p>
 
         <p className="updateMural">
-          Something is incorrect? ...Update mural...
+          <button onClick={updateMuralData}>
+            Something is incorrect? ...Update mural...
+          </button>
         </p>
-        <p className="deleteMural">Mural no longer there? ...Delete mural...</p>
+        <p className="deleteMural">
+          <button onClick={deleteMuralData}>
+            Mural no longer there? ...Delete mural...
+          </button>
+        </p>
       </section>
     </main>
   )

@@ -47,7 +47,9 @@ const AddMural = () => {
       <main className="addMuralPage">
         <div>
           <section className="whatIsMuralDescription">
-            <label htmlFor="">Mural Description</label>
+            <label htmlFor="">
+              <h5>Mural Description</h5>
+            </label>
           </section>
           <input
             className="whatIsMuralDescriptionInput"
@@ -56,7 +58,9 @@ const AddMural = () => {
             onChange={updateMuralData}
           />
           <section className="whatIsArtistName">
-            <label htmlFor="">Artist Name</label>
+            <label htmlFor="">
+              <h5>Artist Name</h5>
+            </label>
           </section>
           <input
             className="whatIsArtistNameInput"
@@ -65,7 +69,9 @@ const AddMural = () => {
             onChange={updateMuralData}
           />
           <section className="whatIsFullAddress">
-            <label htmlFor="">Full Address</label>
+            <label htmlFor="">
+              <h5>Full Address</h5>
+            </label>
           </section>
           <input
             className="whatIsFullAddressInput"
@@ -74,7 +80,9 @@ const AddMural = () => {
             onChange={updateMuralData}
           />
           <section className="whatIsImgURL">
-            <label htmlFor="">Img URL</label>
+            <label htmlFor="">
+              <h5>Img URL</h5>
+            </label>
           </section>
           <input
             className="whatIsImgURLInput"
@@ -91,11 +99,13 @@ const AddMural = () => {
             <input type="text" name="latitude" onChange={updateMuralData} />
           </section> */}
           <section className="logMuralButton">
-            <button onClick={addMuralToApi}>Log a new mural</button>
+            <button onClick={addMuralToApi}>
+              <h4>Log a new mural</h4>
+            </button>
           </section>
 
           <div className="discoverCurrent">
-            Want to discover currently logged murals?
+            <h3>Want to discover currently logged murals?</h3>
           </div>
           <Link to="/search" className="searchMurals">
             Search view
