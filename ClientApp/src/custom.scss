@@ -120,6 +120,67 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
+// HOW IT WORKS SECTION //
+////////////////////////////////////////////////////////
+.howItWorks {
+  color: white;
+  text-align: center;
+  background-color: #e3764a;
+  padding-bottom: 3rem;
+}
+
+.howItWorks h3 {
+  padding-top: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.list h4 {
+  font-size: 1.2rem;
+}
+
+.list {
+  border: 0.1rem solid white;
+  border-radius: 5rem;
+  box-shadow: inset 2px 2px 8px 2px rgba(161, 160, 160, 0.4);
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.list p {
+  margin: 1.3rem;
+}
+
+////////////////////////////////////////////////////////
+// FOOTER //
+////////////////////////////////////////////////////////
+footer {
+  text-align: center;
+  color: rgb(91, 90, 90);
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: rgb(238, 214, 178);
+}
+
+// /* Sign In Page */
+
+// .signIn {
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+
+// .signInHeader {
+//   text-align: center;
+//   color: #c38d9e;
+//   margin-top: 3rem;
+// }
+
+// input {
+//   padding-left: 3rem;
+//   padding-right: 3rem;
+// }
+
+////////////////////////////////////////////////////////
 // SEARCH PAGE //
 ////////////////////////////////////////////////////////
 .searchPage {
@@ -185,67 +246,6 @@ main.hero {
 }
 
 ////////////////////////////////////////////////////////
-// HOW IT WORKS SECTION //
-////////////////////////////////////////////////////////
-.howItWorks {
-  color: white;
-  text-align: center;
-  background-color: #e3764a;
-  padding-bottom: 3rem;
-}
-
-.howItWorks h3 {
-  padding-top: 3rem;
-  font-size: 2rem;
-  color: white;
-}
-
-.list h4 {
-  font-size: 1.2rem;
-}
-
-.list {
-  border: 0.1rem solid white;
-  border-radius: 5rem;
-  box-shadow: inset 2px 2px 8px 2px rgba(161, 160, 160, 0.4);
-  margin: 1.5rem;
-  padding: 1rem;
-}
-
-.list p {
-  margin: 1.3rem;
-}
-
-////////////////////////////////////////////////////////
-// FOOTER //
-////////////////////////////////////////////////////////
-footer {
-  text-align: center;
-  color: rgb(91, 90, 90);
-  padding-top: 3rem;
-  margin-bottom: 3rem;
-  background-color: rgb(238, 214, 178);
-}
-
-// /* Sign In Page */
-
-// .signIn {
-//   display: flex;
-//   justify-content: space-evenly;
-// }
-
-// .signInHeader {
-//   text-align: center;
-//   color: #c38d9e;
-//   margin-top: 3rem;
-// }
-
-// input {
-//   padding-left: 3rem;
-//   padding-right: 3rem;
-// }
-
-////////////////////////////////////////////////////////
 // PAGELOADER //
 ////////////////////////////////////////////////////////
 .loader {
@@ -254,6 +254,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(./images/retrorainbow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.loader h1 {
+  font-size: 3rem;
+  color: rgb(38, 65, 102);
 }
 
 ////////////////////////////////////////////////////////
@@ -391,6 +400,135 @@ footer {
   .directions-link {
     margin-left: 2.9rem;
   }
+}
+
+////////////////////////////////////////////////////////
+// ADD A MURAL PAGE //
+////////////////////////////////////////////////////////
+.addMuralPage > div {
+  display: grid;
+  grid-template-rows: 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 5rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 1rem;
+}
+
+.addMuralPage .whatIsMuralDescription {
+  text-align: right;
+  padding-right: 2rem;
+
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.addMuralPage .whatIsMuralDescriptionInput {
+  text-align: center;
+
+  grid-row: 1;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.addMuralPage .whatIsArtistName {
+  text-align: right;
+  padding-right: 2rem;
+
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.addMuralPage .whatIsArtistNameInput {
+  text-align: center;
+
+  grid-row: 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.addMuralPage .whatIsFullAddress {
+  text-align: right;
+  padding-right: 2rem;
+
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.addMuralPage .whatIsFullAddressInput {
+  text-align: center;
+
+  grid-row: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.addMuralPage .whatIsImgURL {
+  text-align: right;
+  padding-right: 2rem;
+
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.addMuralPage .whatIsImgURLInput {
+  text-align: center;
+
+  grid-row: 4;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.addMuralPage .logMuralButton {
+  text-align: center;
+
+  grid-row: 6;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.discoverCurrent {
+  text-align: center;
+
+  grid-row: 8;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.searchMurals {
+  text-align: center;
+
+  grid-row: 9;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.mapOfMurals {
+  text-align: center;
+
+  grid-row: 9;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+////////////////////////////////////////////////////////
+// PAGE NOT FOUND //
+////////////////////////////////////////////////////////
+.pageNotFound {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/retrorainbow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.goBack {
+  color: whitesmoke;
 }
 
 /* 

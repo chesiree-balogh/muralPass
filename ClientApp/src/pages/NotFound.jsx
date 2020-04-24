@@ -2,15 +2,20 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>
+    <div className="pageNotFound">
       <h2>
         {Math.ceil(Math.random() * 100) % 2 === 0 ? (
-          <span>🤷🏼‍♂️</span>
+          <span></span>
         ) : (
-          <span>🤷‍♀️</span>
+          <span></span>
         )}
-        Not sure how you got here. Do you want to{' '}
-        <a href="" onclick="window.history.go(-1); return false;">
+        <h2>Not sure how you got here. </h2>
+        <h2>Do you want to</h2>
+        <a
+          className="goBack"
+          href=""
+          onclick="window.history.go(-1); return false;"
+        >
           go back?
         </a>
       </h2>
