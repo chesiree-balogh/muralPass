@@ -5,9 +5,9 @@ const EmptyMuralList = () => {
   return (
     <div>
       <section className="no-results">
-        No murals?
+        <h2>No murals?</h2>
         <Link to="/add" className="reportAMural">
-          Add Murals
+          Add Murals Here
         </Link>
       </section>
     </div>

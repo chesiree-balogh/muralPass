@@ -16,7 +16,7 @@ const Search = () => {
   }
   // maybe change this to search by city? instead of artist...
   return (
-    <>
+    <div className="searchPage">
       <section className="search-container">
         <input
           type="search"
@@ -32,7 +32,7 @@ const Search = () => {
           <EmptyMuralList />
         )}
       </main>
-    </>
+    </div>
   )
 }
 
