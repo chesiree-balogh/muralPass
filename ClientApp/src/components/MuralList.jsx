@@ -8,7 +8,8 @@ const MuralList = props => {
       {results.map(mural => {
         return (
           <li>
-            <Link to="/map" className="list-to-map-link">
+            {/* this is displaying search results to the screen */}
+            <Link to={`/murals/${mural.id}`} className="list-to-map-link">
               {mural.artistName} - {mural.fullAddress}
             </Link>
           </li>

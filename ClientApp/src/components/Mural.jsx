@@ -3,7 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-// this pages job is to displaying the mural information
+// import Mural from '/..components/Mural'
+// import React, { useState, useEffect } from 'react'
+// import axios from 'axios'
+
+// // this pages job is to displaying the mural information
+
+// const [mural, setMural] = useState()
+
+// const deleteMuralData = async () => {
+//   const resp = await axios.delete('/api/murals/' + { mural })
+//   console.log(resp.data)
+//   setMural(resp.data)
+// }
+// useEffect(() => {
+//   // make api call on page load
+//   deleteMuralData()
+// }, [])
 
 const MuralDetails = props => {
   const { mural } = props
@@ -28,6 +44,11 @@ const MuralDetails = props => {
         <p className="muralDescription">{mural.muralDescription}</p>
 
         <p className="muralIdNumberDis">Mural ID number: {mural.id}</p>
+
+        <p className="updateMural">
+          Something is incorrect? ...Update mural...
+        </p>
+        <p className="deleteMural">Mural no longer there? ...Delete mural...</p>
       </section>
     </main>
   )

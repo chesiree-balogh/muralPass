@@ -21,7 +21,8 @@ export default class App extends Component {
           <Route exact path="/search" component={Search} />
           <Route exact path="/map" component={Map} />
           <Route exact path="/add" component={AddMural} />
-          <Route exact path="/mural/:muralId" component={MuralDetails} />
+          <Route exact path="/muralDetails" component={MuralDetails} />
+          <Route exact path="/murals/:muralId" component={MuralDetails} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Layout>

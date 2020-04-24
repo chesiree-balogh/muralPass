@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import axios from 'axios'
 import { usePosition } from 'use-position'
+import { Link } from 'react-router-dom'
 
 // hard coded locations
 // const data = [
@@ -97,8 +98,23 @@ const Map = () => {
               anchor="top"
               offsetTop={15}
             >
-              <div className="popup-window">😊</div>
-              {/* <div className="popup-window">😊{selectedMural.description}</div> */}
+              <div className="popup-window">
+                {selectedMural.artistName}
+                <p>
+                  {/* maybe it needs to be a redirect.... */}
+                  {/* how do i call to a specific mural.... by id? */}
+                  <Link
+                    to={`/murals/${selectedMural.id}`}
+                    className="map-to-mural-link"
+                  >
+                    more info
+                  </Link>
+                </p>
+              </div>
+              {/* maybe change this to selected mural image URL? */}
+              {/* <div className="popup-window">
+                😊{selectedMural.muralDescription}
+              </div> */}
             </Popup>
           )}
           {murals.map(place => {

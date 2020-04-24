@@ -205,7 +205,7 @@ input {
 
 .mural-details > section {
   display: grid;
-  grid-template-rows: 5rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 10rem;
+  grid-template-rows: 5rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 5rem 2rem 2rem;
   grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
   padding: 1rem;
 }
@@ -298,6 +298,22 @@ input {
 
   grid-row-start: 11;
   grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.updateMural {
+  text-align: center;
+
+  grid-row-start: 13;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.deleteMural {
+  text-align: center;
+
+  grid-row-start: 13;
+  grid-column-start: 5;
   grid-column-end: 8;
 }
 
