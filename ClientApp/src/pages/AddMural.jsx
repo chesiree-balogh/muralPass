@@ -37,7 +37,7 @@ const AddMural = () => {
     return (
       <Redirect
         to={{
-          pathname: '/mural/' + wasSuccessfullyCreated.newMuralInformation.id,
+          pathname: '/murals/' + wasSuccessfullyCreated.newMuralInformation.id,
           state: { mural: wasSuccessfullyCreated.newMuralInformation },
         }}
       />

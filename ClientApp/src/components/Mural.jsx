@@ -21,8 +21,8 @@ const MuralDetails = props => {
   return (
     <main className="mural-details">
       <img src={mural.imageURL} alt={mural.artistName} />
+      <h1>{mural.artistName}</h1>
       <section>
-        <h1>{mural.artistName}</h1>
         <Link to="/map" className="directions-link">
           <FontAwesomeIcon icon={faMapMarkedAlt} />
         </Link>
@@ -38,16 +38,18 @@ const MuralDetails = props => {
         <p className="muralDescriptionSection">Mural Description:</p>
         <p className="muralDescription">{mural.muralDescription}</p>
 
-        <p className="muralIdNumberDis">Mural ID number: {mural.id}</p>
+        {/* <p className="muralIdNumberDis">Mural ID number: {mural.id}</p> */}
 
         <p className="updateMural">
+          <p>Something is incorrect?</p>
           <button onClick={updateMuralData}>
-            Something is incorrect? ...Update mural...
+            <Link to="/update">Update mural</Link>
           </button>
         </p>
         <p className="deleteMural">
+          <p>Mural no longer there?</p>
           <button onClick={deleteMuralData}>
-            Mural no longer there? ...Delete mural...
+            <Link to="/">Delete mural</Link>
           </button>
         </p>
       </section>
