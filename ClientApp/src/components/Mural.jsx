@@ -43,13 +43,17 @@ const MuralDetails = props => {
         <p className="updateMural">
           <p>Something is incorrect?</p>
           <button onClick={updateMuralData}>
-            <Link to="/update">Update mural</Link>
+            <Link to="/update" className="updateMuralButton">
+              Update mural
+            </Link>
           </button>
         </p>
         <p className="deleteMural">
           <p>Mural no longer there?</p>
           <button onClick={deleteMuralData}>
-            <Link to="/">Delete mural</Link>
+            <Link to="/" className="deleteMuralButton">
+              Delete mural
+            </Link>
           </button>
         </p>
       </section>

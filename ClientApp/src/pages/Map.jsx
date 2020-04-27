@@ -19,7 +19,7 @@ const Map = () => {
   // console.log(latitude, longitude, timestamp, accuracy, error)
 
   const [viewport, setViewport] = useState({
-    width: 415,
+    width: 1440,
     height: 625,
     latitude: latitude,
     longitude: longitude,
@@ -148,6 +148,9 @@ const Map = () => {
             )
           })} */}
         </ReactMapGL>
+        <Link to="./search" className="mapToSearchPage">
+          <p>Search Murals</p>
+        </Link>
       </section>
     </div>
   )
